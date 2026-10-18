@@ -61,7 +61,7 @@ header.top.scrolled{background:rgba(7,9,15,.78);backdrop-filter:blur(16px) satur
 /* hero */
 .hero{position:relative;padding:72px 0 96px;isolation:isolate}
 .hero::before{content:"";position:absolute;inset:-72px 0 0;z-index:-2;
-  background:radial-gradient(900px 520px at 12% 18%,rgba(39,221,245,.16),transparent 60%),radial-gradient(800px 600px at 88% 8%,rgba(241,59,190,.16),transparent 60%),radial-gradient(700px 500px at 60% 100%,rgba(128,99,255,.18),transparent 60%),var(--hero,none) center/cover no-repeat}
+  background:radial-gradient(900px 520px at 12% 18%,rgba(39,221,245,.16),transparent 60%),radial-gradient(800px 600px at 88% 8%,rgba(241,59,190,.16),transparent 60%),radial-gradient(700px 500px at 60% 100%,rgba(128,99,255,.18),transparent 60%),linear-gradient(90deg,rgba(7,9,15,.94) 0%,rgba(7,9,15,.78) 40%,rgba(7,9,15,.45) 100%),linear-gradient(0deg,var(--bg) 0%,transparent 30%),var(--hero,none) center/cover no-repeat}
 .hero::after{content:"";position:absolute;inset:-72px 0 0;z-index:-1;background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);background-size:64px 64px;mask-image:radial-gradient(ellipse 70% 60% at 50% 30%,#000 30%,transparent 75%);-webkit-mask-image:radial-gradient(ellipse 70% 60% at 50% 30%,#000 30%,transparent 75%);opacity:.55}
 .hero-grid{display:grid;grid-template-columns:1.05fr 1fr;gap:56px;align-items:center}
 .eyebrow{display:inline-flex;align-items:center;gap:10px;padding:7px 14px 7px 8px;border:1px solid var(--line2);border-radius:999px;background:rgba(255,255,255,.04);font-size:13.5px;color:var(--muted)}
@@ -216,7 +216,7 @@ footer{border-top:1px solid var(--line);padding:56px 0 40px;color:var(--dim);fon
 </header>
 
 <main>
-<section class="hero">
+<section class="hero" style="--hero:url(assets/hero.webp)">
   <div class="wrap hero-grid">
     <div>
       <span class="eyebrow"><b>NEW</b> Instant digital downloads · 75 products</span>

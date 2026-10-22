@@ -28,7 +28,7 @@ header.top{position:sticky;top:0;z-index:50;transition:background .3s,border-col
 header.top.scrolled{background:rgba(7,9,15,.78);backdrop-filter:blur(16px) saturate(140%);-webkit-backdrop-filter:blur(16px) saturate(140%);border-color:var(--line)}
 .nav{display:flex;align-items:center;gap:28px;height:72px}
 .nav .logo img{height:30px;width:auto}
-.nav nav{display:flex;gap:26px;margin-left:auto;font-size:14.5px;color:var(--muted)}
+.nav nav{display:flex;gap:24px;margin-left:auto;font-size:14.5px;color:var(--muted);white-space:nowrap}
 .nav nav a{transition:color .2s}.nav nav a:hover{color:var(--text)}
 .btn{display:inline-flex;align-items:center;gap:8px;font:600 15px/1 var(--sans);padding:14px 22px;border-radius:999px;border:1px solid transparent;cursor:pointer;transition:transform .25s var(--ease),box-shadow .25s,background .25s,border-color .25s;white-space:nowrap}
 .btn.primary{background:var(--text);color:#0A0C14;box-shadow:0 0 0 1px rgba(255,255,255,.2),0 10px 40px -10px rgba(39,221,245,.55)}
@@ -133,7 +133,7 @@ h1,h2{text-wrap:balance}h2{font:700 clamp(32px,4vw,50px)/1.06 var(--display);let
 .kicker{font:600 11.5px var(--sans);letter-spacing:.12em;text-transform:uppercase;color:var(--dim)}
 .card h3{font:600 18px/1.25 var(--display);letter-spacing:-.01em;margin:6px 0 6px}
 .for{font-size:13.5px;color:var(--muted);margin:0 0 16px;line-height:1.5;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
-.buy{margin-top:auto;display:flex;align-items:center;gap:10px}.also{font-size:12.5px;color:var(--dim);margin:12px 0 0;padding-top:12px;border-top:1px solid var(--line)}.also a{margin-left:6px}
+.buy{margin-top:auto;display:flex;align-items:center;flex-wrap:wrap;gap:10px}.also{font-size:12.5px;color:var(--dim);margin:12px 0 0;padding-top:12px;border-top:1px solid var(--line)}.also a{margin-left:6px}
 .price{font:700 21px var(--display);letter-spacing:-.02em;margin-right:auto}
 .alt{font-size:13px;color:var(--muted);border-bottom:1px solid var(--line2);padding-bottom:1px}
 .alt:hover{color:var(--text);border-color:var(--text)}

@@ -1,0 +1,59 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>What to Put on a Starting Soon Screen (and the Break and Ending Screens) | TheFixer Designs</title><meta name="description" content="A practical guide to the three screens every stream needs: what goes on a starting-soon screen, how long to show it, what the break and ending screens should say, and the sizes OBS expects.">
+<link rel="canonical" href="https://the-fixer.org/guides/stream-starting-soon-screen/"><meta property="og:title" content="What to Put on a Starting Soon Screen"><meta property="og:image" content="https://the-fixer.org/assets/og.png">
+<link rel="icon" href="/favicon.ico"><style>
+:root{color-scheme:dark}body{margin:0;background:#07090f;color:#e8ecf5;font:17px/1.7 Inter,system-ui,sans-serif}a{color:#27ddf5}
+header,main,footer{max-width:760px;margin:0 auto;padding:0 20px}header{padding-top:22px}header img{height:34px}
+h1{font:700 clamp(30px,5vw,44px)/1.15 'Space Grotesk',Inter,sans-serif;margin:34px 0 12px}h2{font:700 24px/1.3 'Space Grotesk',Inter,sans-serif;margin:36px 0 8px}
+.meta{color:#9aa3b5;font-size:14px}.cta{margin:38px 0;padding:20px 22px;border-radius:16px;border:1px solid rgba(255,255,255,.12);background:linear-gradient(120deg,rgba(39,221,245,.1),rgba(128,99,255,.1))}
+footer{color:#9aa3b5;font-size:14px;padding:40px 20px 60px}li{margin:4px 0}
+table{width:100%;border-collapse:collapse;font-size:15px;margin:16px 0}th,td{text-align:left;padding:8px 10px;border-bottom:1px solid rgba(255,255,255,.1)}th{color:#9aa3b5;font-weight:600}
+.steps{counter-reset:s;padding:0;list-style:none}.steps li{position:relative;padding-left:46px;margin:14px 0}.steps li::before{counter-increment:s;content:counter(s);position:absolute;left:0;top:2px;width:30px;height:30px;border-radius:50%;background:#27ddf5;color:#07090f;font:700 15px/30px Inter,sans-serif;text-align:center}
+code{background:rgba(255,255,255,.08);padding:1px 6px;border-radius:6px;font-size:15px}
+.gnav{display:flex;align-items:center;gap:18px;max-width:760px;margin:0 auto;padding:18px 20px;border-bottom:1px solid rgba(255,255,255,.08)}.gnav img{height:26px;width:auto}.gnav nav{margin-left:auto;display:flex;gap:18px;font-size:14px}.gnav nav a{color:#AEB6C8;text-decoration:none}.gnav nav a:hover{color:#fff}@media(max-width:640px){.gnav nav{gap:12px;font-size:13px}}@media(max-width:480px){.gnav{gap:12px;padding:14px 16px}.gnav nav{gap:10px}.gnav nav a:nth-child(2),.gnav nav a:nth-child(5){display:none}}
+</style><link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet"></head><body>
+<header class="gnav"><a href="/"><img src="/assets/logo.png" alt="TheFixer"></a><nav><a href="/#shop">Shop</a><a href="/#kits">Kits</a><a href="/services/">Services</a><a href="/guides/">Guides</a><a href="/#live">Live studio</a></nav></header>
+<main><h1>What to Put on a Starting Soon Screen</h1><p class="meta">TheFixer Designs guide · 2026-10-23</p>
+<p>The starting-soon screen is the first thing a viewer sees, and most of them decide in a few seconds whether to wait. It has one job: tell people the stream is real, it is about to start, and what they will get if they stay. This guide covers the three screens every stream needs, what each one should say, and the exact sizes OBS and Streamlabs expect.</p>
+
+<h2>The three screens</h2>
+<table><tr><th>Screen</th><th>When</th><th>What it must say</th></tr>
+<tr><td>Starting soon</td><td>5 to 10 minutes before you go live</td><td>Your name, what today's stream is, and a start time or countdown</td></tr>
+<tr><td>Be right back</td><td>Short breaks</td><td>That you will return, roughly when, and a reason to stay (chat, music, a clip)</td></tr>
+<tr><td>Stream ending</td><td>Last minute of the stream</td><td>Thanks, next stream date, and where to follow</td></tr></table>
+
+<h2>Starting-soon screen: the five lines</h2>
+<ol class="steps">
+<li><b>Who you are.</b> Your channel name, large. Viewers who arrive from a raid or a share may not know it.</li>
+<li><b>What is happening today.</b> One line: the game, the topic, the project. "Building the shed, part 3" beats "Chill stream".</li>
+<li><b>When it starts.</b> A clock time in your viewer's time zone, or a countdown. A countdown is the single biggest reason people wait.</li>
+<li><b>What to do while they wait.</b> Say hello in chat, follow, drop a song request. Give them one action.</li>
+<li><b>One social handle.</b> Not six. The one you actually answer.</li>
+</ol>
+<p>Keep the text in the middle 80% of the screen. Twitch and YouTube overlays, chat boxes and the mobile layout crop the edges.</p>
+
+<h2>Be-right-back screen</h2>
+<p>Short and honest. "Back in 5" with a timer is enough. Add your music or a highlight clip so the audio does not go dead; silence makes people leave faster than any wait does. If you use a timer, reset it before each break so it never counts up past zero on stream.</p>
+
+<h2>Stream-ending screen</h2>
+<p>Thank them, then tell them when you are back. "Next stream: Thursday 7 pm" is the line that brings people back. Leave it up for at least 60 seconds so the clip and VOD end cleanly, and raid out from this screen if you raid.</p>
+
+<h2>Sizes and formats</h2>
+<table><tr><th>Use</th><th>Size</th><th>Format</th></tr>
+<tr><td>OBS or Streamlabs scene image</td><td>1920 x 1080</td><td>PNG (JPG is fine for photos)</td></tr>
+<tr><td>Animated version</td><td>1920 x 1080</td><td>MP4 or WebM as a media source, loop on</td></tr>
+<tr><td>Vertical (TikTok, mobile)</td><td>1080 x 1920</td><td>PNG</td></tr></table>
+<p>Add the image as an Image Source in its own scene, then switch scenes to show it. For a countdown, add a Text source on top and point it at a text file your timer updates, or use the countdown plugin your streaming software ships with.</p>
+
+<h2>Common mistakes</h2>
+<ul>
+<li><b>No start time.</b> "Starting soon" with no number is a shrug. Give a time or a countdown.</li>
+<li><b>Tiny text.</b> Most viewers are on a phone. Test the screen at phone size; the headline should still be readable.</li>
+<li><b>A different look each time.</b> The three screens should share colours, fonts and layout so the channel feels like one place.</li>
+<li><b>Dead audio.</b> Put music on every waiting screen.</li>
+</ul>
+
+<div class="cta"><b>Ready-made sets.</b> Every <a href="/shop/stream-screens/">TheFixer stream screen pack</a> ships the three screens in 1920 x 1080 as editable SVG plus PNG, designed around a full photo with the five lines above already laid out, and most packs include original sound cues for scene changes.</div>
+</main>
+<footer>&copy; 2026 TheFixer Designs &middot; <a href="/">Home</a> &middot; <a href="/guides/">Guides</a> &middot; eric@the-fixer.org</footer>
+</body></html>

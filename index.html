@@ -230,6 +230,10 @@ footer{border-top:1px solid var(--line);padding:56px 0 40px;color:var(--dim);fon
 if(location.hash==='#free'){location.replace('/free/'+location.search)}</script>
 </head>
 <body class="no-js">
+<!-- 2026-10-29: visitors from the Facebook/Instagram ads landed on this long catalogue (72 visitors, 89% left after one page).
+     Show them the most relevant offer first: the trade business kits. Ad traffic only; normal visitors never see it. -->
+<div id="adbar" style="display:none;position:sticky;top:0;z-index:60;background:linear-gradient(120deg,#27ddf5,#8063ff);color:#07090f;padding:12px 16px;text-align:center;font:700 15px/1.35 Inter,system-ui,sans-serif">Business kits for your trade: invoice, estimate, fillable PDFs and more, $9.99 &middot; <a href="/shop/business-kits/?from=adbar" style="color:#07090f;text-decoration:underline">See the kits</a> &middot; <a href="/free/?from=adbar" style="color:#07090f;text-decoration:underline">or get the free invoice</a></div>
+<script>(function(){try{var q=new URLSearchParams(location.search),s=(q.get("utm_source")||"").toLowerCase(),r=document.referrer||"";if(!location.hash&&(/^(facebook|fb|instagram|ig)$/.test(s)||/facebook\.com|instagram\.com/.test(r))){document.getElementById("adbar").style.display="block"}}catch(e){}})();</script>
 <a class="skip" href="#shop">Skip to products</a>
 <header class="top" id="top">
   <div class="wrap nav" id="nav">

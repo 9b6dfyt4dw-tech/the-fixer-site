@@ -56,7 +56,7 @@ h1{font:700 clamp(28px,6vw,44px)/1.12 'Space Grotesk',Inter,sans-serif;margin:0 
 <script>(function(){function beacon(p){try{var u='https://elyonpc.tail050980.ts.net:10000/hit?p='+encodeURIComponent(p)+'&r='+encodeURIComponent(document.referrer||'')+'&s='+encodeURIComponent(new URLSearchParams(location.search).get('utm_source')||'free');navigator.sendBeacon?navigator.sendBeacon(u):(new Image().src=u)}catch(e){}}
 beacon(location.pathname+location.search);
 document.querySelectorAll('a.dl').forEach(function(a){a.addEventListener('click',function(){beacon('/out/free/'+(a.getAttribute('href')||'').split('/').pop());
-var s=document.getElementById('trade');s.classList.add('hl');setTimeout(function(){s.scrollIntoView({behavior:'smooth',block:'start'})},700)})});
+var s=document.getElementById('trade');s.classList.add('hl');setTimeout(function(){s.scrollIntoView({behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth',block:'start'})},700)})});
 document.querySelectorAll('a.etsybtn').forEach(function(a){a.addEventListener('click',function(){beacon('/out/etsy/free-template')})});
 var f=document.getElementById('sub'),m=document.getElementById('submsg');f.addEventListener('submit',function(ev){ev.preventDefault();
 var em=document.getElementById('em').value.trim();if(!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(em)){m.textContent='Please check the email address.';return}

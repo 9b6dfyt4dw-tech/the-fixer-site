@@ -65,4 +65,5 @@ fetch('https://elyonpc.tail050980.ts.net:10000/subscribe',{method:'POST',headers
 .then(function(r){return r.json()}).then(function(j){m.textContent=j.msg?j.msg.charAt(0).toUpperCase()+j.msg.slice(1)+'.':'Thanks!';if(j.ok){f.reset();beacon('/signup/free-invoice')}})
 .catch(function(){m.textContent='Could not reach our server, please try again later.'})});
 document.querySelectorAll('a.kit').forEach(function(a){a.addEventListener('click',function(){beacon('/out/kit-from-free/'+a.getAttribute('href').split('/')[2])})});})();</script>
+<script>/* 2026-11-06 loading times: same image cache as the home page (/sw.js) so a visitor landing here from an ad or search gets instant covers on the next page */if('serviceWorker' in navigator)addEventListener('load',()=>{navigator.serviceWorker.register('/sw.js').catch(()=>{})})</script>
 </body></html>

@@ -187,6 +187,7 @@ footer{border-top:1px solid var(--line);padding:56px 0 40px;color:var(--dim);fon
   .kits{padding:32px 22px}
 }
 @media (max-width:760px){
+  .hero{--hero:var(--hero-sm)!important}   /* 2026-11-07 loading times: phones get the 960px hero; !important beats the inline --hero on the section (no --hero fallback here: a self-reference would be a var() cycle = invalid) */
   .wrap{padding:0 16px}
   .nav nav,.nav .btn{display:none}.menu{display:block}
   .nav.open nav{display:flex;position:absolute;top:72px;left:0;right:0;flex-direction:column;gap:0;background:rgba(7,9,15,.97);border-bottom:1px solid var(--line);padding:8px 16px 16px}

@@ -18,7 +18,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="/favicon.ico" sizes="any">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-<link rel="preload" as="image" href="assets/p/car-detailing-business-kit.webp" imagesrcset="assets/p/car-detailing-business-kit-360.webp 360w, assets/p/car-detailing-business-kit.webp 720w" imagesizes="(max-width:900px) 62vw, 350px" fetchpriority="high"><link rel="preload" as="image" href="assets/hero.webp">
+<link rel="preload" as="image" href="assets/p/car-detailing-business-kit.webp" imagesrcset="assets/p/car-detailing-business-kit-360.webp 360w, assets/p/car-detailing-business-kit.webp 720w" imagesizes="(max-width:900px) 62vw, 350px" fetchpriority="high"><link rel="preload" as="image" href="assets/hero-960.webp" media="(max-width:760px)"><link rel="preload" as="image" href="assets/hero.webp" media="(min-width:761px)">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'"><noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet"></noscript>
@@ -207,6 +207,7 @@ footer{border-top:1px solid var(--line);padding:56px 0 40px;color:var(--dim);fon
   .kits{padding:32px 22px}
 }
 @media (max-width:760px){
+  .hero{--hero:var(--hero-sm)!important}   /* 2026-11-07 loading times: phones get the 960px hero; !important beats the inline --hero on the section (no --hero fallback here: a self-reference would be a var() cycle = invalid) */
   .wrap{padding:0 16px}
   .nav nav,.nav .btn{display:none}.menu{display:block}
   .nav.open nav{display:flex;position:absolute;top:72px;left:0;right:0;flex-direction:column;gap:0;background:rgba(7,9,15,.97);border-bottom:1px solid var(--line);padding:8px 16px 16px}
@@ -248,7 +249,7 @@ if(location.hash==='#free'){location.replace('/free/'+location.search)}</script>
 </header>
 
 <main>
-<section class="hero" style="--hero:url(assets/hero.webp)">
+<section class="hero" style="--hero:url(assets/hero.webp);--hero-sm:url(assets/hero-960.webp)">
   <div class="wrap hero-grid">
     <div>
       <span class="eyebrow"><b>THEFIXER</b> Software · Hardware · Design</span>

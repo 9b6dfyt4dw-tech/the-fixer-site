@@ -277,9 +277,10 @@ if(location.hash==='#free'){location.replace('/free/'+location.search)}</script>
     <p class="label" style="text-align:center">Welcome to TheFixer City</p>
     <h2 style="text-align:center;margin:0 0 22px">See how TheFixer works, in about a minute.</h2>
     <div class="film">
-      <video class="wide" controls preload="none" playsinline poster="/assets/fixer-city-poster.webp" width="1920" height="1080"><source src="/assets/fixer-city.mp4" type="video/mp4">Your browser cannot play this video.</video>
-      <video class="tall" controls preload="none" playsinline poster="/assets/fixer-city-vertical-poster.webp" width="720" height="1280"><source src="/assets/fixer-city-vertical.mp4" type="video/mp4">Your browser cannot play this video.</video>
+      <video class="wide" controls preload="none" playsinline data-poster="/assets/fixer-city-poster.webp" width="1920" height="1080"><source src="/assets/fixer-city.mp4" type="video/mp4">Your browser cannot play this video.</video>
+      <video class="tall" controls preload="none" playsinline data-poster="/assets/fixer-city-vertical-poster.webp" width="720" height="1280"><source src="/assets/fixer-city-vertical.mp4" type="video/mp4">Your browser cannot play this video.</video>
     </div>
+    <script>/* 2026-11-07 loading times: CSS shows only one of the two films, but a hidden video still downloads its poster; set the poster on the visible one only (30 KB saved per visit) */(()=>{const f=()=>document.querySelectorAll(".film video").forEach(v=>{if(!v.poster&&getComputedStyle(v).display!=="none")v.poster=v.dataset.poster});f();matchMedia("(max-width:700px)").addEventListener("change",f)})()</script>
   </div>
 </section>
 <style>.film video{display:block;width:100%;height:auto;border-radius:18px;border:1px solid rgba(255,255,255,.1);box-shadow:0 24px 70px rgba(39,221,245,.18),0 10px 40px rgba(0,0,0,.5);background:#000}.film .tall{display:none;max-width:420px;margin:0 auto}@media (max-width:700px){.film .wide{display:none}.film .tall{display:block}}</style>

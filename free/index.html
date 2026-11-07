@@ -60,10 +60,10 @@ var s=document.getElementById('trade');s.classList.add('hl');setTimeout(function
 document.querySelectorAll('a.etsybtn').forEach(function(a){a.addEventListener('click',function(){beacon('/out/etsy/free-template')})});
 var f=document.getElementById('sub'),m=document.getElementById('submsg');f.addEventListener('submit',function(ev){ev.preventDefault();
 var em=document.getElementById('em').value.trim();if(!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(em)){m.textContent='Please check the email address.';return}
-if(!document.getElementById('ok').checked){m.textContent='Please tick the box to agree first.';return}m.textContent='Sending...';
-fetch('https://elyonpc.tail050980.ts.net:10000/subscribe',{method:'POST',headers:{'Content-Type':'text/plain'},body:JSON.stringify({email:em,consent:true,list:'free-invoice'})})
+if(!document.getElementById('ok').checked){m.textContent='Please tick the box to agree first.';return}/* 2026-11-07 reliability: no double sign-up, and a sleeping PC answers within 15 s instead of leaving 'Sending...' for minutes */var b=f.querySelector('button');if(b.disabled)return;b.disabled=true;m.textContent='Sending...';
+fetch('https://elyonpc.tail050980.ts.net:10000/subscribe',{method:'POST',headers:{'Content-Type':'text/plain'},body:JSON.stringify({email:em,consent:true,list:'free-invoice'}),signal:window.AbortSignal&&AbortSignal.timeout?AbortSignal.timeout(15000):undefined})
 .then(function(r){return r.json()}).then(function(j){m.textContent=j.msg?j.msg.charAt(0).toUpperCase()+j.msg.slice(1)+'.':'Thanks!';if(j.ok){f.reset();beacon('/signup/free-invoice')}})
-.catch(function(){m.textContent='Could not reach our server, please try again later.'})});
+.catch(function(){m.textContent='Could not reach our server, please try again later.'}).then(function(){b.disabled=false})});
 document.querySelectorAll('a.kit').forEach(function(a){a.addEventListener('click',function(){beacon('/out/kit-from-free/'+a.getAttribute('href').split('/')[2])})});})();</script>
 <script>/* 2026-11-06 loading times: same image cache as the home page (/sw.js) so a visitor landing here from an ad or search gets instant covers on the next page */if('serviceWorker' in navigator)addEventListener('load',()=>{navigator.serviceWorker.register('/sw.js').catch(()=>{})})</script>
 </body></html>

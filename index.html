@@ -454,6 +454,9 @@ if(location.hash==='#free'){location.replace('/free/'+location.search)}</script>
     <div class="legal"><span>&copy; 2026 TheFixer Designs. All designs are original.</span><span>Checkout and delivery are provided by Etsy, Payhip and Gumroad. Visits are counted anonymously: no cookies, no personal data.</span><span><a href="/privacy/">Privacy</a> &middot; <a href="/terms/">Terms &amp; license</a></span></div>
   </div>
 </footer>
+<!-- 2026-11-08 one-step checkout (ONE-SALE-PLAN 'Beyond' 1): Gumroad's overlay (card / Apple Pay, no account) opens on our page. gumroad.js loads only on the
+     first Gumroad Buy click (nothing third-party on page view), then the click is replayed; if it is not ready in 3 s the link opens Gumroad as before. -->
+<script>(function(){var st=0;document.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('a[href*="gumroad.com/l/"]');if(!a||st===2||e.button||e.metaKey||e.ctrlKey||e.shiftKey||e.altKey)return;e.preventDefault();if(st)return;st=1;var t0=Date.now(),s=document.createElement('script');s.src='https://gumroad.com/js/gumroad.js';s.async=true;document.head.appendChild(s);(function w(){if(a.querySelector('.logo-full')){st=2;a.click();return}if(Date.now()-t0>3000){st=2;location.href=a.href;return}setTimeout(w,50)})()})})()</script>
 
 <script>
 document.body.classList.remove('no-js');

@@ -29,7 +29,7 @@ header.top.scrolled{background:rgba(7,9,15,.78);backdrop-filter:blur(16px) satur
 .nav{display:flex;align-items:center;gap:28px;height:72px}
 .nav .logo img{height:30px;width:auto}
 .nav nav{display:flex;gap:24px;margin-left:auto;font-size:var(--fs-base);color:var(--muted);white-space:nowrap}
-.nav nav a{transition:color .2s}.nav nav a:hover{color:var(--text)}
+.nav nav a{transition:color .2s}.nav nav a:hover,.nav nav a[aria-current]{color:var(--text)}
 .btn{display:inline-flex;align-items:center;gap:8px;font:600 15px/1 var(--sans);padding:14px 22px;border-radius:999px;border:1px solid transparent;cursor:pointer;transition:transform .25s var(--ease),box-shadow .25s,background .25s,border-color .25s;white-space:nowrap}
 .btn.primary{background:var(--text);color:#0A0C14;box-shadow:0 0 0 1px rgba(255,255,255,.2),0 10px 40px -10px rgba(39,221,245,.55)}
 .btn.primary:hover{transform:translateY(-2px);box-shadow:0 0 0 1px rgba(255,255,255,.3),0 16px 50px -10px rgba(241,59,190,.6)}

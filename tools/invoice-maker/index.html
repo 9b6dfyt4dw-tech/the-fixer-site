@@ -43,7 +43,7 @@ footer{color:#9aa3b5;font-size:14px;padding:40px 20px 60px}
 <fieldset><legend>Work and materials</legend><div class="lih" aria-hidden="true"><span>Description</span><span>Quantity</span><span>Unit price</span><span></span></div><div id="items"></div><p style="margin:12px 0 0"><button type="button" class="btn" id="add">+ Add a line</button></p></fieldset>
 <fieldset><legend>Totals</legend><div class="three"><label for="cur">Currency sign<input id="cur" type="text" maxlength="5"></label><label for="disc">Discount (amount)<input id="disc" type="number" inputmode="decimal" min="0" step="any"></label><label for="paid">Already paid (deposit)<input id="paid" type="number" inputmode="decimal" min="0" step="any"></label></div><div class="two"><label for="taxl">Tax name (Tax, VAT, GST…)<input id="taxl" type="text" maxlength="20"></label><label for="tax">Tax rate, %<input id="tax" type="number" inputmode="decimal" min="0" step="any"></label></div></fieldset>
 <fieldset style="margin-bottom:0"><legend>Notes and payment terms</legend><label for="notes">Shown at the bottom of the invoice (how to pay, when it is due, thank you)<textarea id="notes" maxlength="800"></textarea></label></fieldset>
-<div class="acts"><button type="button" class="btn go" id="prt">Print or save as PDF</button><button type="button" class="btn" id="clr">Clear everything</button></div>
+<div class="acts"><button type="button" class="btn go" id="prt">Print or save as PDF</button><button type="button" class="btn" id="nxt">New invoice, keep my details</button><button type="button" class="btn" id="clr">Clear everything</button></div>
 <p class="meta" style="margin:14px 0 0">To save a PDF, choose "Save as PDF" as the printer. Tax is worked out after the discount and rounded to cents. Check what an invoice must show where you work; this tool does not give tax or legal advice.</p></form>
 <h2 id="pv">Your invoice</h2>
 <section id="inv" aria-labelledby="pv" aria-live="off"><div class="top"><div><p id="pbiz"></p><p class="pre" id="pbizd"></p></div><div class="r"><p class="word" id="pword">INVOICE</p><p class="pre"><span id="rno"><span class="k">No.</span> <span id="pno"></span><br></span><span class="k">Date</span> <span id="pdt"></span><span id="rdue"><br><span class="k" id="kdue">Due</span> <span id="pdue"></span></span></p></div></div>
@@ -75,6 +75,7 @@ function iso(d){return d.getFullYear()+'-'+('0'+(d.getMonth()+1)).slice(-2)+'-'+
 function fd(v){if(!v)return'';var p=v.split('-'),d=new Date(+p[0],p[1]-1,+p[2]);return isNaN(d)?v:d.toLocaleDateString(undefined,{year:'numeric',month:'long',day:'numeric'})}
 function t(i,v){$(i).textContent=v}
 function show(i,on){$(i).hidden=!on}
+var arm2=0;
 /* print footer, bottom left of every page: "Invoice INV-12" (browsers without page margin boxes just leave it out) */
 function pgf(W,no){var e=$('pgf');if(!e){e=document.createElement('style');e.id='pgf';document.head.appendChild(e)}no=String(no||'').replace(/[^\w .#\/-]/g,'').slice(0,40);e.textContent='@media print{@page{@bottom-left{content:"'+W+(no?' '+no:'')+'";font:9pt system-ui,sans-serif;color:#555}}}'}
 function kind(){var k=document.querySelector('input[name=kind]:checked');return k?k.value:'invoice'}
@@ -91,6 +92,7 @@ function draw(){
   lab('no',W+' number');lab('dt',W+' date');lab('due',est?'Valid until (optional)':'Due date (optional)');
   t('pbiz',$('biz').value||'Your business name');t('pbizd',$('bizd').value);t('pcl',$('cl').value||'Client name');t('pcld',$('cld').value);
   pgf(W,$('no').value);
+  if(!arm2)t('nxt','New '+W.toLowerCase()+', keep my details');
   t('pno',$('no').value);show('rno',!!$('no').value);t('pdt',fd($('dt').value));t('pdue',fd($('due').value));show('rdue',!!$('due').value);
   var tb=$('prow'),sub=0;tb.textContent='';
   rows().forEach(function(r){var q=r.q===''?1:num(r.q),a=r2(q*num(r.p));if(!r.d&&!a)return;sub=r2(sub+a);var tr=document.createElement('tr');
@@ -108,6 +110,9 @@ if(o&&o.f&&o.rows){setKind(o.kind==='estimate'?'estimate':'invoice');F.forEach(f
 $('im').addEventListener('input',draw);$('im').addEventListener('change',draw);
 $('add').addEventListener('click',function(){if(document.querySelectorAll('#items .li').length<60)row().querySelector('input').focus();draw()});
 $('prt').addEventListener('click',function(){window.print()});
+/* next invoice: business details, currency, tax and notes stay; client, lines, discount and deposit go; the number goes up by one (INV-0042 -> INV-0043) */
+function bump(n){var m=/^(.*?)(\d+)(\D*)$/.exec(n);if(!m)return n;var d=String(parseInt(m[2],10)+1);while(d.length<m[2].length)d='0'+d;return m[1]+d+m[3]}
+$('nxt').addEventListener('click',function(){var b=this;if(!arm2){arm2=1;b.textContent='Tap again to start it';setTimeout(function(){arm2=0;draw()},4000);return}arm2=0;['cl','cld','disc','paid'].forEach(function(k){$(k).value=''});$('no').value=bump($('no').value);var d=new Date();$('dt').value=iso(d);d.setDate(d.getDate()+14);$('due').value=iso(d);$('items').textContent='';row();row();draw();$('cl').focus()});
 var arm=0;$('clr').addEventListener('click',function(){var b=this;if(!arm){arm=1;b.textContent='Tap again to clear';setTimeout(function(){arm=0;b.textContent='Clear everything'},4000);return}arm=0;b.textContent='Clear everything';try{localStorage.removeItem(K)}catch(e){}fresh();draw()});
 draw();
 })();</script>

@@ -104,7 +104,7 @@ function draw(){
   if(!tb.children.length){var tr=document.createElement('tr'),td=document.createElement('td');td.colSpan=4;td.style.color='#6b7280';td.style.textAlign='left';td.textContent='Add your first line above.';tr.appendChild(td);tb.appendChild(tr)}
   var disc=Math.min(num($('disc').value),sub),base=r2(sub-disc),rate=num($('tax').value),tax=r2(base*rate/100),tot=r2(base+tax),paid=num($('paid').value);
   t('psub',money(sub));show('rdisc',disc>0);t('pdisc','-'+money(disc));show('rtax',rate>0);t('ptaxl',($('taxl').value||'Tax')+' ('+rate+'%)');t('ptax',money(tax));
-  t('ptot',money(tot));show('rpaid',paid>0);t('ppaid','-'+money(paid));show('rbal',paid>0);show('ppd',kind()!=='estimate'&&tot>0&&paid>0&&r2(tot-paid)<=0);t('pbal',money(r2(tot-paid)));
+  t('ptot',money(tot));show('rpaid',paid>0);t('ppaid','-'+money(paid));show('rbal',paid>0);var pd=kind()!=='estimate'&&tot>0&&paid>0&&r2(tot-paid)<=0;show('ppd',pd);if(pd)show('rdue',false);t('pbal',money(r2(tot-paid)));
   t('pnotes',$('notes').value);show('pnw',!!$('notes').value);t('ppay',$('pay').value);show('ppw',!!$('pay').value&&kind()!=='estimate');$('pft').classList.toggle('side',(function(v){return !!v&&v.length<=280&&v.split(/\n/).length<=6})($('notes').value));
   try{var o={f:{},rows:rows(),kind:kind()};F.forEach(function(k){o.f[k]=$(k).value});localStorage.setItem(K,JSON.stringify(o))}catch(e){}
 }

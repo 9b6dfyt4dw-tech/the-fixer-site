@@ -75,6 +75,7 @@ function num(v){v=parseFloat(String(v).replace(',','.'));return isFinite(v)&&v>0
 function r2(v){return Math.round(v*100)/100}
 function money(v){return ($('cur').value||'')+v.toLocaleString(undefined,{minimumFractionDigits:2,maximumFractionDigits:2})}
 function iso(d){return d.getFullYear()+'-'+('0'+(d.getMonth()+1)).slice(-2)+'-'+('0'+d.getDate()).slice(-2)}
+function tm(){if(kind()==='estimate')return'';var a=$('dt').value,b=$('due').value;if(!a||!b)return'';var n=Math.round((Date.parse(b)-Date.parse(a))/864e5);return n===0?' (on receipt)':n===7||n===14||n===30?' ('+n+' days)':''}
 function fd(v){if(!v)return'';var p=v.split('-'),d=new Date(+p[0],p[1]-1,+p[2]);return isNaN(d)?v:d.toLocaleDateString(undefined,{year:'numeric',month:'long',day:'numeric'})}
 function t(i,v){$(i).textContent=v}
 function show(i,on){$(i).hidden=!on}
@@ -96,7 +97,7 @@ function draw(){
   t('pbiz',$('biz').value||'Your business name');t('pbizd',$('bizd').value);t('pcl',$('cl').value||'Client name');t('pcld',$('cld').value);
   pgf(W,$('no').value);
   if(!arm2)t('nxt','New '+W.toLowerCase()+', keep my details');
-  t('pno',$('no').value);show('rno',!!$('no').value);t('pdt',fd($('dt').value));t('pdue',fd($('due').value));show('rdue',!!$('due').value);
+  t('pno',$('no').value);show('rno',!!$('no').value);t('pdt',fd($('dt').value));t('pdue',fd($('due').value)+tm());show('rdue',!!$('due').value);
   var tb=$('prow'),sub=0;tb.textContent='';
   rows().forEach(function(r){var q=r.q===''?1:num(r.q),a=r2(q*num(r.p));if(!r.d&&!a)return;sub=r2(sub+a);var tr=document.createElement('tr');
     [r.d,String(q),money(num(r.p)),money(a)].forEach(function(x){var td=document.createElement('td');td.textContent=x;tr.appendChild(td)});tb.appendChild(tr)});

@@ -470,7 +470,7 @@ if(location.hash==='#free'){location.replace('/free/'+location.search)}</script>
 
 <script>
 document.body.classList.remove('no-js');
-const hdr=document.getElementById('top');const onScroll=()=>hdr.classList.toggle('scrolled',scrollY>12);onScroll();addEventListener('scroll',onScroll,{passive:true});
+const hdr=document.getElementById('top');{/* 2026-11-11 hashHold: a link like /#shop or /#contact lands with the section just under the header and holds there while the page above finishes growing; any touch, wheel or key hands control back */let on=1;const off=()=>{on=0};['wheel','touchstart','keydown','mousedown'].forEach(e=>addEventListener(e,off,{passive:true,once:true}));const go=()=>{if(!on)return;let el=null,q=null;try{q=new URLSearchParams(location.search).get('q');el=location.hash.length>1?document.getElementById(decodeURIComponent(location.hash.slice(1))):null}catch(_){}if(!el||q)return;const y=el.getBoundingClientRect().top+scrollY-hdr.getBoundingClientRect().bottom-8;if(Math.abs(y-scrollY)>4)scrollTo({top:Math.max(0,y),behavior:'instant'})};[60,400,1000,2000].forEach(ms=>setTimeout(go,ms));addEventListener('load',go)}const onScroll=()=>hdr.classList.toggle('scrolled',scrollY>12);onScroll();addEventListener('scroll',onScroll,{passive:true});
 const nav=document.getElementById('nav'),menu=document.getElementById('menu');
 menu.addEventListener('click',()=>{const o=nav.classList.toggle('open');menu.setAttribute('aria-expanded',o)});
 nav.querySelectorAll('nav a').forEach(a=>a.addEventListener('click',()=>{nav.classList.remove('open');menu.setAttribute('aria-expanded',false)}));

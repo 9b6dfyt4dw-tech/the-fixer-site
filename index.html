@@ -293,11 +293,11 @@ if(location.hash==='#free'){location.replace('/free/'+location.search)}</script>
 
 <section id="city-film" style="padding:64px 0 0">
   <div class="wrap">
-    <p class="label" style="text-align:center">Welcome to TheFixer City</p>
-    <h2 style="text-align:center;margin:0 auto 22px">See how TheFixer works, in about a minute.</h2>
+    <p class="label" style="text-align:center">TheFixer on film</p>
+    <h2 style="text-align:center;margin:0 auto 22px">Software, hardware and design, in half a minute.</h2>
     <div class="film">
-      <video class="wide" controls preload="none" playsinline data-poster="/assets/fixer-city-poster.webp" width="1920" height="1080"><source src="/assets/fixer-city.mp4" type="video/mp4">Your browser cannot play this video.</video>
-      <video class="tall" controls preload="none" playsinline data-poster="/assets/fixer-city-vertical-poster.webp" width="720" height="1280"><source src="/assets/fixer-city-vertical.mp4" type="video/mp4">Your browser cannot play this video.</video>
+      <video class="wide" controls preload="none" playsinline data-poster="/assets/fixer-film-poster.webp" width="1920" height="1080"><source src="/assets/fixer-film.mp4" type="video/mp4">Your browser cannot play this video.</video>
+      <video class="tall" controls preload="none" playsinline data-poster="/assets/fixer-film-vertical-poster.webp" width="720" height="1280"><source src="/assets/fixer-film-vertical.mp4" type="video/mp4">Your browser cannot play this video.</video>
     </div>
     <script>/* 2026-11-07 loading times: CSS shows only one of the two films, but a hidden video still downloads its poster; set the poster on the visible one only, chosen by the same media query as the CSS (the style rule comes later in the page) */(()=>{const m=matchMedia("(max-width:700px)"),f=()=>{const v=document.querySelector(m.matches?".film .tall":".film .wide");if(v&&!v.poster)v.poster=v.dataset.poster};f();m.addEventListener("change",f)})()</script>
   </div>

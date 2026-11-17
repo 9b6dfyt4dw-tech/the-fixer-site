@@ -62,7 +62,7 @@ a:focus-visible,button:focus-visible,input:focus-visible{outline:3px solid #27dd
   </div>
 </footer>
 <script>(function(){var HIT='https://elyonpc.tail050980.ts.net:10000/hit',SUB='https://elyonpc.tail050980.ts.net:10000/subscribe';
-function beacon(p){try{var u=HIT+'?p='+encodeURIComponent(p)+'&r='+encodeURIComponent(document.referrer||'')+'&s='+encodeURIComponent(new URLSearchParams(location.search).get('utm_source')||'deckdiag');navigator.sendBeacon?navigator.sendBeacon(u):(new Image().src=u)}catch(e){}}
+function beacon(p){try{var u=HIT+'?p='+encodeURIComponent(p)+'&r='+encodeURIComponent(document.referrer||'')+'&s='+encodeURIComponent(new URLSearchParams(location.search).get('utm_source')||new URLSearchParams(location.search).get('from')||'deckdiag');navigator.sendBeacon?navigator.sendBeacon(u):(new Image().src=u)}catch(e){}}
 beacon(location.pathname+location.search);
 var f=document.getElementById('sub'),m=document.getElementById('submsg');f.addEventListener('submit',function(ev){ev.preventDefault();
 var em=document.getElementById('em').value.trim();if(!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(em)){m.textContent='Please check the email address.';return}

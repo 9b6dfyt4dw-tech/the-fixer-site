@@ -20,6 +20,7 @@ h1{font:700 clamp(28px,6vw,44px)/1.12 'Space Grotesk',Inter,sans-serif;margin:0 
 .kit img{width:100%;aspect-ratio:4/3;object-fit:cover;background:#111}.kit .t{padding:8px 10px 0;font-weight:600;font-size:15px;line-height:1.3}.kit .pr{padding:4px 10px 10px;color:#ffd34a;font-weight:700}
 .etsy{margin:14px 0 0;padding:14px 16px;border-radius:14px;border:1px solid rgba(241,100,30,.45);background:rgba(241,100,30,.10);color:#e8ecf5;font-size:15px;line-height:1.5}
 .etsy b{color:#ffd34a}.etsybtn{margin:12px 0 0;background:#f1641e;color:#fff}
+.etsytop{display:block;text-align:center;margin:-2px 0 14px;padding:11px 14px;border-radius:12px;border:1px solid rgba(241,100,30,.6);color:#ffb38a;font-weight:600;font-size:15px;text-decoration:none}
 .starter{display:grid;grid-template-columns:1fr;gap:10px;margin:12px 0}@media(min-width:760px){.starter{grid-template-columns:.8fr 1.2fr}}
 .starter .col{padding:14px 16px;border-radius:14px;border:1px solid rgba(255,255,255,.12);background:rgba(10,12,22,.6);font-size:15px;color:#c3cad8}
 .starter .best{border-color:#ffd34a;background:rgba(255,211,74,.07)}.starter b{color:#e8ecf5}.starter .pr{color:#ffd34a;font-weight:700}.starter ul{margin:6px 0 0;padding-left:18px}
@@ -38,6 +39,7 @@ h1{font:700 clamp(28px,6vw,44px)/1.12 'Space Grotesk',Inter,sans-serif;margin:0 
 <h1>Free invoice template. Fill it in on your phone.</h1>
 <img class="pm" src="/free/free-invoice-preview.webp" alt="The free invoice template" width="318" height="412" decoding="async"><p class="lead">A clean, professional invoice + estimate for small service businesses. Download it free: no sign-up, no email.</p>
 <a class="btn primary dl" href="/free/small-business-invoice-template-fillable-letter.pdf" download>Download the free PDF</a>
+<a class="etsytop" href="https://www.etsy.com/listing/4599393068/small-business-invoice-template-excel?utm_source=the-fixer.org&amp;utm_medium=free-page&amp;utm_campaign=free-top" rel="noopener">Or get it on Etsy for half price &rsaquo;</a>
 <ul class="ticks"><li>Fillable PDF that opens right in your phone's browser</li><li>Excel / Google Sheets workbook: totals, tax and balance calculate for you</li><li>Estimate tab and a services price list included</li></ul>
 <a class="btn ghost dl" href="/free/small-business-invoice-template.xlsx" download>Download the Excel / Google Sheets file</a>
 <p class="fine">Prefer A4 paper? <a class="dl" href="/free/small-business-invoice-template-fillable-a4.pdf" download>A4 PDF</a> &middot; <a class="dl" href="/free/thefixer-free-invoice-template.zip" download>everything as one ZIP</a></p>
@@ -78,6 +80,7 @@ document.querySelectorAll('a.dl').forEach(function(a){a.addEventListener('click'
 var s=document.getElementById('trade');s.classList.add('hl');setTimeout(function(){s.scrollIntoView({behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth',block:'start'})},700)})});
 /* 2026-11-19: the invoice maker link was the one free option with no beacon; count it with the downloads */document.querySelectorAll('a.im').forEach(function(a){a.addEventListener('click',function(){beacon('/out/free/invoice-maker')})});
 document.querySelectorAll('a.etsybtn').forEach(function(a){a.addEventListener('click',function(){beacon('/out/etsy/free-template')})});
+document.querySelectorAll('a.etsytop').forEach(function(a){a.addEventListener('click',function(){beacon('/out/etsy/free-top')})});
 var f=document.getElementById('sub'),m=document.getElementById('submsg');f.addEventListener('submit',function(ev){ev.preventDefault();
 var em=document.getElementById('em').value.trim();if(!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(em)){m.textContent='Please check the email address.';return}
 if(!document.getElementById('ok').checked){m.textContent='Please tick the box to agree first.';return}/* 2026-11-07 reliability: no double sign-up, and a sleeping PC answers within 15 s instead of leaving 'Sending...' for minutes */var b=f.querySelector('button');if(b.disabled)return;b.disabled=true;m.textContent='Sending...';

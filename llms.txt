@@ -1,0 +1,39 @@
+# TheFixer — Software, Hardware & Design. If it’s broken, consider it fixed.
+
+> Software, hardware and design: repair, custom firmware, on-premises AI and premium templates for trades and creators. If it’s broken, consider it fixed.
+
+## Product families
+
+- [Business Kits for small businesses and creators | TheFixer Designs](https://the-fixer.org/shop/business-kits/?utm_source=llms&utm_medium=referral) (7 products): 7 business kits: Invoice spreadsheet, fillable PDFs and branded social posts for one trade, in one download.
+- [Invoice Templates for small businesses | TheFixer Designs](https://the-fixer.org/shop/invoice-templates/?utm_source=llms&utm_medium=referral) (10 products): 10 invoice templates: Excel invoice + estimate workbook with dropdown pricing and automatic totals, plus fillable PDFs in Letter and A4.
+- [Social Media Templates for small businesses | TheFixer Designs](https://the-fixer.org/shop/social-media-templates/?utm_source=llms&utm_medium=referral) (71 products): 71 social media templates: Editable SVG post and story designs with PNG previews, styled for one specific kind of business.
+- [Sound Effects for small businesses and creators | TheFixer Designs](https://the-fixer.org/shop/sound-effects/?utm_source=llms&utm_medium=referral) (1 product): 1 sound effects: Original synthesized WAV sound effects for games, apps and videos. No stock samples.
+- [Stream & Video Screens for small businesses | TheFixer Designs](https://the-fixer.org/shop/stream-screens/?utm_source=llms&utm_medium=referral) (19 products): 19 stream & video screens: 1920x1080 screens for streams and videos as editable SVG + PNG, many with original sound cues.
+
+## Free downloads and tools
+
+- [Free Printable Invoice Template (Fillable PDF + Excel) | TheFixer Designs](https://the-fixer.org/free/?utm_source=llms&utm_medium=referral): Free printable invoice template: fill in the PDF on your phone, print it, or use the Excel/Google Sheets workbook with automatic totals. No sign-up, no email.
+- [Free UI Sound Effects: 3 Original WAV Button, Confirm and Level Up Sounds | TheFixer Designs](https://the-fixer.org/free-sounds/?utm_source=llms&utm_medium=referral): Three free original UI sound effects (soft confirm, interface tap, level up) as 48 kHz WAV files. Play them here, download them free, no sign-up.
+- [Free Calculators for Small Service Businesses](https://the-fixer.org/tools/?utm_source=llms&utm_medium=referral): Free calculators for trades and service businesses: price a job, set a day rate, work out late fees, split deposit and stage payments, plan quote follow-ups.
+- [Free Invoice and Estimate Maker: Print or Save as PDF](https://the-fixer.org/tools/invoice-maker/?utm_source=llms&utm_medium=referral): Free invoice and estimate maker: type details and line items, add your logo, then print it or save it as a PDF. No sign-up; nothing you type leaves the page.
+- [Free Work Order Maker: Fill In, Sign on Screen, Print or Save as PDF](https://the-fixer.org/tools/work-order/?utm_source=llms&utm_medium=referral): Free work order maker for trades: job details, task checklist, parts used, time on site and an on-screen customer signature. Print or save as PDF. No sign-up.
+
+## By trade and guides
+
+- [Invoice templates and business kits by trade | TheFixer Designs](https://the-fixer.org/trades/?utm_source=llms&utm_medium=referral): Pick your trade: invoice + estimate templates with your services pre-filled, fillable PDFs and matching business kits for 10 trades.
+- [Mechanic Job Log Book and Free Invoice Template for Auto Repair | TheFixer Designs](https://the-fixer.org/for-mechanics/?utm_source=llms&utm_medium=referral): For mechanics and small auto repair shops: a printed job log book with customer sign-off, a free invoice template and a simple way to keep job records.
+- [Job Log Books for Mechanics, Plumbers, Electricians and Landscapers | TheFixer Designs](https://the-fixer.org/log-books/?utm_source=llms&utm_medium=referral): Printed job log books for the trades: one record per job with a customer sign-off line. Paperback and hardcover, printed and shipped by Amazon.
+- [Guides for small service businesses | TheFixer Designs](https://the-fixer.org/guides/?utm_source=llms&utm_medium=referral): Practical invoicing, estimate and payment-term guides for trades and small service businesses. Free, no sign-up.
+- [Services: repair, firmware and on-premises AI | TheFixer Designs](https://the-fixer.org/services/?utm_source=llms&utm_medium=referral): Board-level electronics repair and micro-soldering, reverse engineering and custom firmware, on-premises AI automation and hardware prototyping. Remote first.
+- [Book a repair: electronics fixed at board level | TheFixer Designs](https://the-fixer.org/repair/?utm_source=llms&utm_medium=referral): Electronics repair in Phoenix, Arizona or by mail: phones, laptops, consoles, instruments and circuit boards fixed at board level. Quote before work starts.
+
+## Stores
+
+- [Etsy shop](https://www.etsy.com/shop/TheFixerDesigns): the full catalog
+- [Payhip shop](https://payhip.com/TheFixer): instant downloads
+- [Gumroad shop](https://fixereric.gumroad.com): instant downloads
+
+## Contact
+
+- Email: eric@the-fixer.org
+- Sitemap: https://the-fixer.org/sitemap.xml
